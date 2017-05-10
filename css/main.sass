@@ -1,0 +1,130 @@
+$myBG: #333
+
+body
+	margin: 0
+	height: 3000px
+	background: $myBG
+/*STARTPAGE*/
+
+.startpage_wrapper
+	background: $myBG
+	background-image: url("../img/line_1.png")
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100vh
+
+.startpage
+	
+	height: 100%
+
+/*1st LINE*/
+
+.header_1stline, .header_3rdline
+	height: 80px
+	div
+		@extend .header_1stline
+
+/*2nd LINE*/
+.header_2ndline
+	.secnddiv
+		margin-top: 300px
+		padding: 10px
+
+.helloText
+	width: 900px
+	color: #fff
+	text-align: center
+	margin-left: auto
+	margin-right: auto
+	overflow: hidden
+
+.header_2ndline_p
+	@extend .helloText
+	text-align: justify
+	margin-top: 20px
+
+	
+
+/*3rd LINE*/
+.stick_line
+	@extend .header_1stline
+	position: fixed
+	bottom: 0
+
+.menu_box
+	padding: auto
+
+.main_menu_nav
+	margin-top: 2em
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+	display: block
+	li
+		list-style: none
+		display: inline-block
+		border-top: 3px solid transparent
+		border-bottom: 3px solid transparent
+
+		nav
+			dislay: none
+			background: orange	
+			position: absolute
+			top: -10000px
+			opacity: 0
+			border-radius: 5px
+			transition: background 0.3s
+
+			
+			li
+				display: block	
+				border: 0
+
+		&:hover nav
+			display: block
+			top: 100%
+			opacity: 1
+			transition: opacity 0.3s
+			a
+				width: inherit
+				border-bottom: 2px solid darkorange
+				&:lastchild
+					border: 0
+			a:hover
+				background: darkorange
+	a
+		color: #fff
+		display: inline-block
+		text-decoration: none
+		font-size: 1.5em
+		padding: 10px 30px
+		border-radius: 5px
+		transition: background 0.7s
+		&:hover
+			background: orange
+			text-decoration: none
+			transition: background 0.3s
+li.hovered
+	a
+		background: orange	
+
+.childrened
+	&>a
+		&:after
+			content: ''
+			position: absolute
+			height: 0
+			width: 0
+			border: 5px solid transparent
+			border-top: 5px solid white
+			top: 68%
+			margin-left: 10px
+		
+/* ANIMATION */
+	
+
+
+/* SECOND_PAGE */
+
+.second_page
+	height: 100vh
